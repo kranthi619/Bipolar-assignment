@@ -9,7 +9,7 @@ pipeline {
         stage('CheckOut') {
             steps {
                 echo 'Checkout the source code from GitHub'
-                git 'https://github.com/kranthi619/insurenceProject.git'
+                git 'https://github.com/kranthi619/Bipolar-assignment.git'
             }
         }
         
@@ -22,7 +22,7 @@ pipeline {
         
         stage('Publish Reports using HTML') {
             steps {
-                publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '/var/lib/jenkins/workspace/insurence-project/target/surefire-reports', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true]) 
+                publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '/var/lib/jenkins/workspace/Bipolar-assignment/target/surefire-reports', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true]) 
             }
         }
 
